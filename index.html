@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Haid Mendoza, desarrollador frontend</title>
+    <meta name="description"
+        content="Portafolio de Haid José Mendoza de Ávila, Ingeniero de Sistemas y desarrollador frontend con Angular, microfrontends y Spring Boot.">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Doto:wght@800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Iconos reutilizables -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-home" viewBox="0 0 24 24">
+                <path d="M3 11l9-8 9 8M5 10v10h14V10" />
+            </symbol>
+            <symbol id="i-bag" viewBox="0 0 24 24">
+                <rect x="3" y="7" width="18" height="13" rx="2" />
+                <path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2" />
+            </symbol>
+            <symbol id="i-code" viewBox="0 0 24 24">
+                <path d="M8 7l-5 5 5 5M16 7l5 5-5 5" />
+            </symbol>
+            <symbol id="i-cap" viewBox="0 0 24 24">
+                <path d="M2 9l10-5 10 5-10 5zM6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
+            </symbol>
+            <symbol id="i-list" viewBox="0 0 24 24">
+                <path d="M4 7h16M4 12h10M4 17h16" />
+            </symbol>
+            <symbol id="i-mail" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="M3 7l9 6 9-6" />
+            </symbol>
+            <symbol id="i-down" viewBox="0 0 24 24">
+                <path d="M12 4v11m-5-5l5 5 5-5M5 20h14" />
+            </symbol>
+            <symbol id="i-pin" viewBox="0 0 24 24">
+                <path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" />
+                <circle cx="12" cy="10" r="2.5" />
+            </symbol>
+            <symbol id="i-clock" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+            </symbol>
+            <symbol id="i-check" viewBox="0 0 24 24">
+                <path d="M5 12.5l4.5 4.5L19 7.5" />
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- NAVBAR superior (menú móvil sin JS: checkbox + CSS) -->
+    <header class="nav">
+        <a class="logo" href="#inicio" aria-label="Haid Mendoza, inicio"><i aria-hidden="true"></i>Haid Mendoza</a>
+        <input type="checkbox" id="menu" class="menu-toggle" aria-label="Abrir menú">
+        <label for="menu" class="burger" aria-hidden="true"><i></i><i></i></label>
+        <nav class="links" aria-label="Principal">
+            <a href="#inicio" data-s="inicio" class="on">Inicio</a>
+            <a href="#experiencia" data-s="experiencia">Experiencia</a>
+            <a href="#arquitectura" data-s="arquitectura">Arquitectura</a>
+            <a href="#proyectos" data-s="proyectos">Proyectos</a>
+            <a href="#habilidades" data-s="habilidades">Habilidades</a>
+            <a href="#educacion" data-s="educacion">Educación</a>
+            <a href="#contacto" data-s="contacto">Contacto</a>
+            <!-- CONFIG: coloca aquí la ruta de tu hoja de vida (PDF) -->
+            <a class="cv" href="REEMPLAZAR_HOJA_DE_VIDA.pdf" download><svg>
+                    <use href="#i-down" />
+                </svg>Hoja de vida</a>
+        </nav>
+    </header>
+
+    <div class="page">
+
+        <main>
+            <!-- HERO: terminal -->
+            <section class="term rv" id="inicio" aria-label="Presentación">
+                <div class="term-text">
+                    <p class="prompt"><span>haid@portafolio</span> ~ % whoami</p>
+                    <h1 aria-label="Haid"><span>H</span><span>A</span><span>I</span><span>D</span></h1>
+                    <p class="type t1">> desarrollador frontend</p>
+                    <p class="type t2">> ingeniero de sistemas, cartagena</p>
+                </div>
+                <aside class="me" aria-label="Perfil">
+                    <div class="p-head"><span class="av lg" aria-hidden="true">HM</span>
+                        <div>
+                            <h2>Haid Mendoza</h2>
+                            <p>Desarrollador frontend, Ing. de Sistemas</p>
+                        </div>
+                    </div>
+                    <p class="bio">Más de 2 años construyendo interfaces empresariales con Angular, con base sólida en
+                        Spring Boot y PostgreSQL. Me gusta que el código sea claro y que las pantallas carguen rápido.
+                    </p>
+                    <!-- CONFIG: ajusta el estado cuando cambie tu situación -->
+                    <div class="badges"><span class="ok"><i></i>Abierto a ofertas</span><span class="loc"><svg>
+                                <use href="#i-pin" />
+                            </svg>Cartagena, CO</span></div>
+                    <div class="p-btns"><a class="btn red" href="#contacto">Contactar</a><a class="btn"
+                            href="REEMPLAZAR_HOJA_DE_VIDA.pdf" download>Hoja de vida</a></div>
+                </aside>
+            </section>
+
+            <div class="cols one">
+                <section class="left" id="experiencia" aria-labelledby="ex-t">
+                    <div class="sec-h rv">
+                        <h2 id="ex-t">Experiencia</h2><span class="mono">04 registros</span>
+                    </div>
+                    <ol class="list exp-list">
+                        <li class="rv"><svg class="hi">
+                                <use href="#i-bag" />
+                            </svg>
+                            <div>
+                                <h3>J.O. Services Management Corporation S.A.S.</h3><time>ago 2025 &mdash; abr
+                                    2026</time>
+                                <p><b>Frontend Developer</b>. Desarrollo y escalabilidad de aplicaciones empresariales
+                                    con Angular sobre arquitectura de microfrontends (Module Federation): shell
+                                    orquestador y cinco m&oacute;dulos remotos (inventario, contabilidad,
+                                    tesorer&iacute;a, compras y reportes). Implementaci&oacute;n de autenticaci&oacute;n
+                                    segura con JWT, interceptores HTTP, carga diferida (lazy loading), gesti&oacute;n
+                                    reactiva de estado con RxJS y almacenamiento en cliente (LocalStorage,
+                                    SessionStorage y Cache API).</p>
+                            </div>
+                        </li>
+                        <li class="rv"><svg>
+                                <use href="#i-bag" />
+                            </svg>
+                            <div>
+                                <h3>Software de liquidaciones</h3><time>2023 &mdash; 2024</time>
+                                <p><b>Frontend Developer (Freelance)</b>. Contrato de prestaci&oacute;n de servicios de
+                                    cuatro meses construyendo la interfaz y l&oacute;gica cliente de un sistema
+                                    financiero de liquidaciones de n&oacute;mina y prestaciones laborales. Dise&ntilde;o
+                                    e implementaci&oacute;n en Angular con TypeScript, formularios reactivos complejos
+                                    con validaciones en tiempo real, consumo de APIs RESTful, gesti&oacute;n de estados
+                                    y exportaci&oacute;n de reportes detallados.</p>
+                            </div>
+                        </li>
+                        <li class="rv"><svg>
+                                <use href="#i-bag" />
+                            </svg>
+                            <div>
+                                <h3>Tierras agr&iacute;colas</h3><time>freelance</time>
+                                <p><b>Full Stack Developer (Freelance)</b>. Dise&ntilde;o e implementaci&oacute;n de
+                                    soluciones para gesti&oacute;n y consulta catastral de predios agr&iacute;colas.
+                                    Construcci&oacute;n de APIs y servicios web en .NET (C#) con Entity Framework,
+                                    modelado de bases de datos relacionales en PostgreSQL y programaci&oacute;n de
+                                    procedimientos almacenados optimizados en PL/pgSQL para consultas complejas.
+                                    Frontend interactivo y modular con Angular.</p>
+                            </div>
+                        </li>
+                        <li class="rv"><svg>
+                                <use href="#i-bag" />
+                            </svg>
+                            <div>
+                                <h3>Primer proyecto freelance</h3><time>2023</time>
+                                <p><b>Desarrollador de Software</b>. Cuatro meses de desarrollo colaborativo en equipo
+                                    multidisciplinario tras graduarme como tecn&oacute;logo. Ciclo de desarrollo
+                                    &aacute;gil bajo Scrum: levantamiento y an&aacute;lisis de requerimientos
+                                    funcionales, modelado entidad-relaci&oacute;n, desarrollo de interfaces web
+                                    responsivas, integraci&oacute;n de servicios web y control de versiones con
+                                    Git/GitHub bajo est&aacute;ndares Clean Code.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+
+            <!-- ARQUITECTURA -->
+            <section class="arch" id="arquitectura" aria-labelledby="ar-t">
+                <div class="sec-h rv">
+                    <h2 id="ar-t">Arquitectura</h2><span class="mono">diagrama conceptual</span>
+                </div>
+                <div class="arch-wrap rv">
+                    <div class="dscroll" tabindex="0" role="region"
+                        aria-label="Diagrama de arquitectura, desplazable en horizontal">
+                        <svg class="arch-svg" viewBox="0 0 1200 420" role="img"
+                            aria-label="Arquitectura: el navegador accede al orquestador con cinco microfrontends, que se conectan al API Gateway, a cinco microservicios Spring Boot y a PostgreSQL">
+                            <rect class="grp" x="10" y="160" width="130" height="100" rx="22" /><text class="lab" x="26"
+                                y="182">Cliente</text>
+                            <rect class="grp sh" x="230" y="20" width="190" height="380" rx="26" />
+
+                            <text class="lab" x="246" y="55">microfrontends</text>
+
+                            <rect class="grp" x="500" y="145" width="190" height="130" rx="26" /><text class="lab"
+                                x="518" y="168">API Gateway</text>
+                            <rect class="grp sh" x="780" y="20" width="190" height="380" rx="26" /><text class="lab"
+                                x="796" y="42">Microservicios,</text><text class="lab" x="796" y="55">Spring Boot</text>
+                            <rect class="grp" x="1050" y="160" width="140" height="100" rx="22" /><text class="lab"
+                                x="1066" y="182">Datos</text>
+                            <path class="l1" d="M126 218 H190 V122 H255" />
+                            <path class="l2" d="M395 122 H450 V193 H518" />
+                            <path class="l2" d="M692 193 H730 V104 H805" />
+                            <path class="l3" d="M945 104 H990 V198 H1064" />
+                            <path class="l1" d="M126 218 H190 V182 H255" />
+                            <path class="l2" d="M395 182 H462 V203 H518" />
+                            <path class="l2" d="M692 203 H742 V164 H805" />
+                            <path class="l3" d="M945 164 H1002 V205 H1064" />
+                            <path class="l1" d="M126 218 H190 V242 H255" />
+                            <path class="l2" d="M395 242 H474 V213 H518" />
+                            <path class="l2" d="M692 213 H754 V224 H805" />
+                            <path class="l3" d="M945 224 H1014 V212 H1064" />
+                            <path class="l1" d="M126 218 H190 V302 H255" />
+                            <path class="l2" d="M395 302 H462 V223 H518" />
+                            <path class="l2" d="M692 223 H742 V284 H805" />
+                            <path class="l3" d="M945 284 H1002 V219 H1064" />
+                            <path class="l1" d="M126 218 H190 V362 H255" />
+                            <path class="l2" d="M395 362 H450 V233 H518" />
+                            <path class="l2" d="M692 233 H730 V344 H805" />
+                            <path class="l3" d="M945 344 H990 V226 H1064" />
+                            <rect class="nd" style="--d:0s" x="24" y="196" width="102" height="44" rx="14" /><text
+                                x="75" y="222">Navegador</text>
+                            <rect class="nd" style="--d:.8s" x="255" y="100" width="140" height="44" rx="14" /><text
+                                x="325" y="126">Inventario</text>
+                            <rect class="nd" style="--d:.8s" x="255" y="160" width="140" height="44" rx="14" /><text
+                                x="325" y="186">Contabilidad</text>
+                            <rect class="nd" style="--d:.8s" x="255" y="220" width="140" height="44" rx="14" /><text
+                                x="325" y="246">Tesorería</text>
+                            <rect class="nd" style="--d:.8s" x="255" y="280" width="140" height="44" rx="14" /><text
+                                x="325" y="306">Compras</text>
+                            <rect class="nd" style="--d:.8s" x="255" y="340" width="140" height="44" rx="14" /><text
+                                x="325" y="366">Reportes</text>
+                            <rect class="nd gw" style="--d:1.7s" x="518" y="188" width="154" height="50" rx="14" /><text
+                                class="w" x="595" y="210">Punto de entrada</text><text class="w" x="595" y="225">a los
+                                servicios</text>
+                            <rect class="nd" style="--d:2.6s" x="805" y="82" width="140" height="44" rx="14" /><text
+                                x="875" y="102">Autenticación</text><text x="875" y="116">JWT</text>
+                            <rect class="nd" style="--d:2.6s" x="805" y="142" width="140" height="44" rx="14" /><text
+                                x="875" y="162">Servicios de</text><text x="875" y="176">Dominio</text>
+                            <rect class="nd" style="--d:2.6s" x="805" y="202" width="140" height="44" rx="14" /><text
+                                x="875" y="222">Servicios de</text><text x="875" y="236">Reportes</text>
+                            <rect class="nd" style="--d:2.6s" x="805" y="262" width="140" height="44" rx="14" /><text
+                                x="875" y="282">Servicio de Catálogos</text><text x="875" y="296">Maestros</text>
+                            <rect class="nd" style="--d:2.6s" x="805" y="322" width="140" height="44" rx="14" /><text
+                                x="875" y="342">Servicio de</text><text x="875" y="356">Notificaciones</text>
+                            <rect class="nd db" style="--d:3.5s" x="1064" y="190" width="112" height="44" rx="14" />
+                            <text class="w" x="1120" y="217">PostgreSQL</text>
+                            <circle class="dot" cx="255" cy="122" r="3.2" />
+                            <circle class="pt0" cx="395" cy="122" r="3.2" />
+                            <circle class="pt0" cx="518" cy="193" r="3.2" />
+                            <circle class="pt0" cx="692" cy="193" r="3.2" />
+                            <circle class="pt0" cx="805" cy="104" r="3.2" />
+                            <circle class="dot g" cx="945" cy="104" r="3.2" />
+                            <circle class="dot g" cx="1064" cy="198" r="3.2" />
+                            <circle class="dot" cx="255" cy="182" r="3.2" />
+                            <circle class="pt0" cx="395" cy="182" r="3.2" />
+                            <circle class="pt0" cx="518" cy="203" r="3.2" />
+                            <circle class="pt0" cx="692" cy="203" r="3.2" />
+                            <circle class="pt0" cx="805" cy="164" r="3.2" />
+                            <circle class="dot g" cx="945" cy="164" r="3.2" />
+                            <circle class="dot g" cx="1064" cy="205" r="3.2" />
+                            <circle class="dot" cx="255" cy="242" r="3.2" />
+                            <circle class="pt0" cx="395" cy="242" r="3.2" />
+                            <circle class="pt0" cx="518" cy="213" r="3.2" />
+                            <circle class="pt0" cx="692" cy="213" r="3.2" />
+                            <circle class="pt0" cx="805" cy="224" r="3.2" />
+                            <circle class="dot g" cx="945" cy="224" r="3.2" />
+                            <circle class="dot g" cx="1064" cy="212" r="3.2" />
+                            <circle class="dot" cx="255" cy="302" r="3.2" />
+                            <circle class="pt0" cx="395" cy="302" r="3.2" />
+                            <circle class="pt0" cx="518" cy="223" r="3.2" />
+                            <circle class="pt0" cx="692" cy="223" r="3.2" />
+                            <circle class="pt0" cx="805" cy="284" r="3.2" />
+                            <circle class="dot g" cx="945" cy="284" r="3.2" />
+                            <circle class="dot g" cx="1064" cy="219" r="3.2" />
+                            <circle class="dot" cx="255" cy="362" r="3.2" />
+                            <circle class="pt0" cx="395" cy="362" r="3.2" />
+                            <circle class="pt0" cx="518" cy="233" r="3.2" />
+                            <circle class="pt0" cx="692" cy="233" r="3.2" />
+                            <circle class="pt0" cx="805" cy="344" r="3.2" />
+                            <circle class="dot g" cx="945" cy="344" r="3.2" />
+                            <circle class="dot g" cx="1064" cy="226" r="3.2" />
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M126 218 H190 V122 H255"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.0;0.17;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.0;0.005;0.165;0.17;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M395 122 H450 V193 H518"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.2;0.37;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.2;0.205;0.365;0.37;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M692 193 H730 V104 H805"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.4;0.57;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.4;0.405;0.565;0.57;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M945 104 H990 V198 H1064"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.6;0.77;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.6;0.605;0.765;0.77;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M126 218 H190 V182 H255"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.02;0.19;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.02;0.025;0.185;0.19;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M395 182 H462 V203 H518"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.22;0.39;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.22;0.225;0.385;0.39;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M692 203 H742 V164 H805"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.42;0.59;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.42;0.425;0.585;0.59;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M945 164 H1002 V205 H1064"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.62;0.79;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.62;0.625;0.785;0.79;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M126 218 H190 V242 H255"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.04;0.21;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.04;0.045;0.205;0.21;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M395 242 H474 V213 H518"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.24;0.41;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.24;0.245;0.405;0.41;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M692 213 H754 V224 H805"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.44;0.61;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.44;0.445;0.605;0.61;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M945 224 H1014 V212 H1064"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.64;0.81;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.64;0.645;0.805;0.81;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M126 218 H190 V302 H255"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.06;0.23;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.06;0.065;0.225;0.23;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M395 302 H462 V223 H518"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.26;0.43;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.26;0.265;0.425;0.43;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M692 223 H742 V284 H805"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.46;0.63;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.46;0.465;0.625;0.63;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M945 284 H1002 V219 H1064"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.66;0.83;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.66;0.665;0.825;0.83;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M126 218 H190 V362 H255"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.08;0.25;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.08;0.085;0.245;0.25;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M395 362 H450 V233 H518"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.28;0.45;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.28;0.285;0.445;0.45;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M692 233 H730 V344 H805"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.48;0.65;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.48;0.485;0.645;0.65;1" />
+                            </circle>
+                            <circle class="pt" r="3.6" cx="0" cy="0">
+                                <animateMotion dur="4.5s" repeatCount="indefinite" path="M945 344 H990 V226 H1064"
+                                    keyPoints="0;0;1;1" keyTimes="0;0.68;0.85;1" calcMode="linear" />
+                                <animate attributeName="opacity" dur="4.5s" repeatCount="indefinite"
+                                    values="0;0;1;1;0;0" keyTimes="0;0.68;0.685;0.845;0.85;1" />
+                            </circle>
+                        </svg>
+                    </div>
+                    <p class="hint"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Desliza para explorar el diagrama completo</p>
+                    <ol class="notes">
+                        <li>
+                            <h3>Orquestador</h3>
+                            <p>Aplicación anfitriona que carga cada microfrontend con Module Federation.</p>
+                        </li>
+                        <li>
+                            <h3>Cinco microfrontends</h3>
+                            <p>Inventario, contabilidad, tesorería, compras y reportes, como módulos independientes.</p>
+                        </li>
+                        <li>
+                            <h3>Gateway</h3>
+                            <p>Entrada única hacia los servicios del backend.</p>
+                        </li>
+                        <li>
+                            <h3>Microservicios</h3>
+                            <p>APIs REST con Spring Boot y autenticación con JWT.</p>
+                        </li>
+                        <li>
+                            <h3>Base de datos</h3>
+                            <p>PostgreSQL como almacenamiento de los datos.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- PROYECTOS -->
+            <section class="projects" id="proyectos" aria-labelledby="pr-t">
+                <div class="sec-h rv">
+                    <h2 id="pr-t">Proyectos</h2><span class="mono">05 trabajos</span>
+                </div>
+                <!-- CONFIG: reemplaza los href de repositorio -->
+                <div class="carousel-wrap rv">
+                    <div class="carousel" id="proj-carousel" role="region" aria-label="Carrusel de proyectos">
+                        <div class="carousel-track" id="carousel-track">
+                            <!-- 1 -->
+                            <article class="pc carousel-slide">
+                                <div class="thumb dark">
+                                    <svg viewBox="0 0 320 200" aria-hidden="true">
+                                        <rect width="320" height="200" fill="#111" />
+                                        <rect x="10" y="26" width="52" height="164" rx="8" fill="#1b1b1b" />
+                                        <rect x="18" y="38" width="30" height="6" rx="3" fill="#e10600" />
+                                        <rect x="18" y="56" width="36" height="4" rx="2" fill="#333" />
+                                        <rect x="18" y="68" width="28" height="4" rx="2" fill="#333" />
+                                        <rect x="72" y="26" width="110" height="46" rx="8" fill="#1b1b1b" />
+                                        <rect x="190" y="26" width="120" height="46" rx="8" fill="#e10600" />
+                                        <path class="draw" d="M72 170c24-30 40 6 64-14s40-30 64-22 60-24 110-30"
+                                            fill="none" stroke="#e8e8e8" stroke-width="2.5" stroke-linecap="round" />
+                                        <rect x="72" y="84" width="238" height="1" fill="#2a2a2a" />
+                                    </svg>
+                                </div>
+                                <div class="pc-h">
+                                    <h3>Poseidón Finance</h3><span class="mono">personal</span>
+                                </div>
+                                <p>Finanzas personales con control de préstamos y deudas, dashboard financiero e
+                                    integración de IA. Angular, Spring Boot, PostgreSQL.</p>
+                                <p class="lk"><a href="REEMPLAZAR_REPO_POSEIDON">Repositorio</a><span>Demo
+                                        pendiente</span></p>
+                            </article>
+                            <!-- 2 -->
+                            <article class="pc carousel-slide">
+                                <div class="thumb">
+                                    <svg viewBox="0 0 320 200" aria-hidden="true">
+                                        <rect width="320" height="200" fill="#fff" />
+                                        <rect x="0" y="0" width="320" height="22" fill="#f2f2f2" />
+                                        <rect x="16" y="34" width="140" height="92" rx="10" fill="#e10600" />
+                                        <circle cx="86" cy="80" r="26" fill="#fff" opacity=".9" />
+                                        <rect x="168" y="34" width="136" height="42" rx="8" fill="#eee" />
+                                        <rect x="168" y="84" width="136" height="42" rx="8" fill="#eee" />
+                                        <rect x="16" y="140" width="96" height="9" rx="4" fill="#111" />
+                                        <rect x="16" y="158" width="64" height="7" rx="3" fill="#bbb" />
+                                        <rect x="226" y="146" width="78" height="40" rx="20 20 20 5" fill="#111" />
+                                        <rect x="238" y="162" width="44" height="6" rx="3" fill="#fff" />
+                                    </svg>
+                                </div>
+                                <div class="pc-h">
+                                    <h3>E-Tech</h3><span class="mono">personal</span>
+                                </div>
+                                <p>Comercio electrónico con autenticación JWT, roles, panel administrativo y chatbot con
+                                    IA. Angular, Spring Boot, PostgreSQL.</p>
+                                <p class="lk"><a href="REEMPLAZAR_REPO_ETECH">Repositorio</a><span>Demo pendiente</span>
+                                </p>
+                            </article>
+                            <!-- 3 -->
+                            <article class="pc carousel-slide">
+                                <div class="thumb">
+                                    <svg viewBox="0 0 320 200" aria-hidden="true">
+                                        <rect width="320" height="200" fill="#f7f7f7" />
+                                        <g fill="none" stroke="#111" stroke-width="2">
+                                            <path
+                                                d="M160 44V74M160 74H88V104M160 74H232V104M88 128V148M88 148H52V168M88 148H124V168M232 128V148M232 148H196V168M232 148H268V168" />
+                                        </g>
+                                        <circle cx="160" cy="30" r="14" fill="#e10600" />
+                                        <circle cx="88" cy="116" r="12" fill="#111" />
+                                        <circle cx="232" cy="116" r="12" fill="#111" />
+                                        <rect x="38" y="168" width="28" height="16" rx="8" fill="#fff" stroke="#111" />
+                                        <rect x="110" y="168" width="28" height="16" rx="8" fill="#e10600" />
+                                        <rect x="182" y="168" width="28" height="16" rx="8" fill="#fff" stroke="#111" />
+                                        <rect x="254" y="168" width="28" height="16" rx="8" fill="#e10600" />
+                                    </svg>
+                                </div>
+                                <div class="pc-h">
+                                    <h3>Weka</h3><span class="mono">académico</span>
+                                </div>
+                                <p>Análisis y predicción con machine learning (J48 y Random Forest). Angular, Spring
+                                    Boot, PostgreSQL.</p>
+                                <p class="lk"><a href="REEMPLAZAR_REPO_WEKA">Repositorio</a><span>Demo pendiente</span>
+                                </p>
+                            </article>
+                            <!-- 4 -->
+                            <article class="pc carousel-slide">
+                                <div class="thumb">
+                                    <svg viewBox="0 0 320 200" aria-hidden="true">
+                                        <rect width="320" height="200" fill="#fff5f8" />
+                                        <circle cx="160" cy="72" r="38" fill="#ffcce0" />
+                                        <circle cx="160" cy="72" r="24" fill="#e10600" opacity=".85" />
+                                        <rect x="60" y="120" width="200" height="12" rx="6" fill="#ffd6e8" />
+                                        <rect x="80" y="140" width="160" height="8" rx="4" fill="#f5b8cc" />
+                                        <rect x="100" y="156" width="120" height="8" rx="4" fill="#f5b8cc" />
+                                        <rect x="30" y="36" width="36" height="36" rx="10" fill="#e10600"
+                                            opacity=".2" />
+                                        <rect x="254" y="36" width="36" height="36" rx="10" fill="#e10600"
+                                            opacity=".2" />
+                                        <path d="M48 54 L66 54 M48 62 L60 62" stroke="#e10600" stroke-width="2"
+                                            stroke-linecap="round" fill="none" />
+                                        <path d="M272 54 L290 54 M278 62 L290 62" stroke="#e10600" stroke-width="2"
+                                            stroke-linecap="round" fill="none" />
+                                    </svg>
+                                </div>
+                                <div class="pc-h">
+                                    <h3>Bellezas</h3><span class="mono">freelance</span>
+                                </div>
+                                <p>Software para gestión y publicación de cursos de estética. Permite a escuelas de
+                                    belleza subir y administrar su catálogo de cursos en línea.</p>
+                                <p class="lk"><a href="REEMPLAZAR_REPO_BELLEZAS">Repositorio</a><span>Demo
+                                        pendiente</span></p>
+                            </article>
+                            <!-- 5 -->
+                            <article class="pc carousel-slide">
+                                <div class="thumb">
+                                    <svg viewBox="0 0 320 200" aria-hidden="true">
+                                        <rect width="320" height="200" fill="#f0f4ff" />
+                                        <rect x="20" y="20" width="280" height="30" rx="8" fill="#e10600"
+                                            opacity=".15" />
+                                        <rect x="30" y="27" width="80" height="16" rx="5" fill="#e10600" />
+                                        <rect x="20" y="62" width="130" height="118" rx="10" fill="#dce8ff" />
+                                        <rect x="30" y="72" width="110" height="8" rx="4" fill="#8baee8" />
+                                        <rect x="30" y="88" width="90" height="8" rx="4" fill="#8baee8" />
+                                        <rect x="30" y="104" width="100" height="8" rx="4" fill="#8baee8" />
+                                        <rect x="30" y="120" width="70" height="8" rx="4" fill="#8baee8" />
+                                        <rect x="160" y="62" width="140" height="55" rx="10" fill="#e10600"
+                                            opacity=".85" />
+                                        <rect x="170" y="76" width="50" height="8" rx="4" fill="#fff" opacity=".8" />
+                                        <rect x="170" y="92" width="80" height="8" rx="4" fill="#fff" opacity=".6" />
+                                        <rect x="160" y="125" width="140" height="55" rx="10" fill="#fff"
+                                            stroke="#dce8ff" stroke-width="1.5" />
+                                        <rect x="170" y="139" width="60" height="8" rx="4" fill="#8baee8" />
+                                        <rect x="170" y="155" width="90" height="8" rx="4" fill="#c3d5f5" />
+                                    </svg>
+                                </div>
+                                <div class="pc-h">
+                                    <h3>CAFIP</h3><span class="mono">freelance</span>
+                                </div>
+                                <p>Sistema de gestión desarrollado para CAFIP. Plataforma web para administración y
+                                    control de procesos internos de la organización.</p>
+                                <p class="lk"><a href="REEMPLAZAR_REPO_CAFIP">Repositorio</a><span>Demo pendiente</span>
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="car-btn" id="car-prev" aria-label="Anterior">&#8592;</button>
+                        <div class="car-dots" id="car-dots" role="tablist" aria-label="Diapositivas de proyectos"></div>
+                        <button class="car-btn" id="car-next" aria-label="Siguiente">&#8594;</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HABILIDADES -->
+            <section class="skills" id="habilidades" aria-labelledby="sk-t">
+                <div class="sec-h rv skills-head">
+                    <h2 id="sk-t">Habilidades</h2>
+                    <button type="button" class="btn-skills-all" id="skills-toggle-all"
+                        aria-label="Colapsar o expandir todas las categorías">Colapsar todas</button>
+                </div>
+                <div class="srow rv is-open">
+                    <h3 tabindex="0" role="button" aria-expanded="true">
+                        <span class="srow-title">Desarrollo web</span>
+                        <span class="srow-meta"><span class="srow-badge">23</span><svg class="srow-arr"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span>
+                    </h3>
+                    <ul>
+                        <li style="--c:#e34f26"><i class="devicon-html5-plain colored"></i>HTML5</li>
+                        <li style="--c:#264de4"><i class="devicon-css3-plain colored"></i>CSS3</li>
+                        <li style="--c:#d4a800"><i class="devicon-javascript-plain colored"></i>JavaScript</li>
+                        <li style="--c:#2f74c0"><i class="devicon-typescript-plain colored"></i>TypeScript</li>
+                        <li style="--c:#dd0031"><i class="devicon-angularjs-plain colored"></i>Angular</li>
+                        <li style="--c:#b7178c"><i class="devicon-rxjs-plain colored"></i>RxJS</li>
+                        <li style="--c:#38b2ac"><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</li>
+                        <li style="--c:#c76494"><i class="devicon-sass-plain colored"></i>SCSS</li>
+                        <li style="--c:#e0702a"><i class="devicon-java-plain colored"></i>Java</li>
+                        <li style="--c:#4a9d3f"><i class="devicon-spring-plain colored"></i>Spring Boot</li>
+                        <li style="--c:#7a3fb0"><i class="devicon-csharp-plain colored"></i>C#</li>
+                        <li style="--c:#6b43a6"><i class="devicon-dot-net-plain colored"></i>.NET</li>
+                        <li style="--c:#e0234e"><i class="devicon-nestjs-plain colored"></i>NestJS</li>
+                        <li style="--c:#555">Dise&ntilde;o de APIs REST</li>
+                        <li style="--c:#555">Arquitectura de microservicios</li>
+                        <li style="--c:#e0702a">Module Federation</li>
+                        <li style="--c:#555">Arquitectura de microfrontends</li>
+                        <li style="--c:#555">Clean Architecture</li>
+                        <li style="--c:#555">SOLID</li>
+                        <li style="--c:#555">Clean Code</li>
+                        <li style="--c:#555">Dise&ntilde;o responsive</li>
+                        <li style="--c:#555">Lazy Loading</li>
+                        <li style="--c:#555">Autenticaci&oacute;n y autorizaci&oacute;n JWT</li>
+                    </ul>
+                </div>
+                <div class="srow rv is-open">
+                    <h3 tabindex="0" role="button" aria-expanded="true">
+                        <span class="srow-title">Datos</span>
+                        <span class="srow-meta"><span class="srow-badge">13</span><svg class="srow-arr"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span>
+                    </h3>
+                    <ul>
+                        <li style="--c:#336791"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</li>
+                        <li style="--c:#336791"><i class="devicon-azuresqldatabase-plain colored"></i>SQL</li>
+                        <li style="--c:#336791">PL/pgSQL</li>
+                        <li style="--c:#555">Procedimientos almacenados</li>
+                        <li style="--c:#555">Modelado de bases de datos relacionales</li>
+                        <li style="--c:#555">Dise&ntilde;o y optimizaci&oacute;n de consultas</li>
+                        <li style="--c:#6b43a6"><i class="devicon-dot-net-plain colored"></i>Entity Framework</li>
+                        <li style="--c:#4a9d3f"><i class="devicon-spring-plain colored"></i>Spring Data JPA</li>
+                        <li style="--c:#4a9d3f">Hibernate</li>
+                        <li style="--c:#555">IndexedDB</li>
+                        <li style="--c:#555">LocalStorage</li>
+                        <li style="--c:#555">SessionStorage</li>
+                        <li style="--c:#555">Cache API</li>
+                    </ul>
+                </div>
+                <div class="srow rv is-open">
+                    <h3 tabindex="0" role="button" aria-expanded="true">
+                        <span class="srow-title">Infraestructura</span>
+                        <span class="srow-meta"><span class="srow-badge">10</span><svg class="srow-arr"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span>
+                    </h3>
+                    <ul>
+                        <li style="--c:#2496ed"><i class="devicon-docker-plain colored"></i>Docker</li>
+                        <li style="--c:#2496ed">Docker Compose</li>
+                        <li style="--c:#e0502a"><i class="devicon-git-plain colored"></i>Git</li>
+                        <li style="--c:#111"><i class="devicon-github-original"></i>GitHub</li>
+                        <li style="--c:#555">APIs y servicios web</li>
+                        <li style="--c:#555">Configuraci&oacute;n de variables de entorno</li>
+                        <li style="--c:#555">Gesti&oacute;n de conexiones a bases de datos</li>
+                        <li style="--c:#555">Integraci&oacute;n y despliegue de aplicaciones</li>
+                        <li style="--c:#555">Arquitectura cliente-servidor</li>
+                        <li style="--c:#555">Conceptos de CI/CD</li>
+                    </ul>
+                </div>
+                <div class="srow rv is-open">
+                    <h3 tabindex="0" role="button" aria-expanded="true">
+                        <span class="srow-title">Sistemas operativos</span>
+                        <span class="srow-meta"><span class="srow-badge">05</span><svg class="srow-arr"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span>
+                    </h3>
+                    <ul>
+                        <li style="--c:#111"><i class="devicon-windows8-original colored"></i>Windows</li>
+                        <li style="--c:#e8a427"><i class="devicon-linux-plain colored"></i>Linux</li>
+                        <li style="--c:#555">Terminal y l&iacute;nea de comandos</li>
+                        <li style="--c:#2f74c0"><i class="devicon-powershell-plain colored"></i>PowerShell</li>
+                        <li style="--c:#555">Bash (conocimientos b&aacute;sicos)</li>
+                    </ul>
+                </div>
+                <div class="srow rv is-open">
+                    <h3 tabindex="0" role="button" aria-expanded="true">
+                        <span class="srow-title">Soporte TI</span>
+                        <span class="srow-meta"><span class="srow-badge">11</span><svg class="srow-arr"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span>
+                    </h3>
+                    <ul>
+                        <li style="--c:#ff6c37"><i class="devicon-postman-plain colored"></i>Postman</li>
+                        <li style="--c:#4a9d3f">Swagger / OpenAPI</li>
+                        <li style="--c:#555">Pruebas y depuraci&oacute;n de APIs</li>
+                        <li style="--c:#555">An&aacute;lisis y resoluci&oacute;n de incidencias</li>
+                        <li style="--c:#555">Depuraci&oacute;n de aplicaciones web</li>
+                        <li style="--c:#555">Diagn&oacute;stico de errores</li>
+                        <li style="--c:#555">Validaci&oacute;n de datos</li>
+                        <li style="--c:#555">Pruebas funcionales</li>
+                        <li style="--c:#555">Documentaci&oacute;n t&eacute;cnica</li>
+                        <li style="--c:#555">Gesti&oacute;n de tickets de soporte</li>
+                        <li style="--c:#e0502a"><i class="devicon-git-plain colored"></i>Git para control de versiones
+                        </li>
+                    </ul>
+                </div>
+                <div class="srow rv is-open">
+                    <h3 tabindex="0" role="button" aria-expanded="true">
+                        <span class="srow-title">Inteligencia artificial</span>
+                        <span class="srow-meta"><span class="srow-badge">11</span><svg class="srow-arr"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span>
+                    </h3>
+                    <ul>
+                        <li style="--c:#10a37f">APIs de OpenAI</li>
+                        <li style="--c:#4285f4"><i class="devicon-google-plain colored"></i>Google Gemini API</li>
+                        <li style="--c:#4a9d3f"><i class="devicon-spring-plain colored"></i>Spring AI</li>
+                        <li style="--c:#555">Integraci&oacute;n de modelos de lenguaje (LLM)</li>
+                        <li style="--c:#555">Desarrollo de chatbots</li>
+                        <li style="--c:#555">Asistentes virtuales</li>
+                        <li style="--c:#555">Integraci&oacute;n de IA en aplicaciones web</li>
+                        <li style="--c:#555">Procesamiento de contexto para LLM</li>
+                        <li style="--c:#555">&Aacute;rboles de decisi&oacute;n J48</li>
+                        <li style="--c:#555">Random Forest</li>
+                        <li style="--c:#555">Weka</li>
+                    </ul>
+                </div>
+                <div class="srow rv is-open">
+                    <h3 tabindex="0" role="button" aria-expanded="true">
+                        <span class="srow-title">Herramientas</span>
+                        <span class="srow-meta"><span class="srow-badge">19</span><svg class="srow-arr"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span>
+                    </h3>
+                    <ul>
+                        <li style="--c:#007acc"><i class="devicon-vscode-plain colored"></i>Visual Studio Code</li>
+                        <li style="--c:#e0702a"><i class="devicon-intellij-plain colored"></i>IntelliJ IDEA</li>
+                        <li style="--c:#7a3fb0"><i class="devicon-visualstudio-plain colored"></i>Visual Studio</li>
+                        <li style="--c:#e0502a"><i class="devicon-git-plain colored"></i>Git</li>
+                        <li style="--c:#111"><i class="devicon-github-original"></i>GitHub</li>
+                        <li style="--c:#ff6c37"><i class="devicon-postman-plain colored"></i>Postman</li>
+                        <li style="--c:#4a9d3f">Swagger</li>
+                        <li style="--c:#336791"><i class="devicon-postgresql-plain colored"></i>pgAdmin</li>
+                        <li style="--c:#555">DBeaver</li>
+                        <li style="--c:#cb3837"><i class="devicon-npm-original-wordmark colored"></i>npm</li>
+                        <li style="--c:#4a9d3f"><i class="devicon-nodejs-plain colored"></i>Node.js</li>
+                        <li style="--c:#dd0031"><i class="devicon-angularjs-plain colored"></i>Angular CLI</li>
+                        <li style="--c:#e0702a"><i class="devicon-maven-plain colored"></i>Maven</li>
+                        <li style="--c:#4a9d3f">Gradle</li>
+                        <li style="--c:#15c213"><i class="devicon-jest-plain colored"></i>Jest</li>
+                        <li style="--c:#e0702a"><i class="devicon-java-plain colored"></i>JUnit</li>
+                        <li style="--c:#f24e1e"><i class="devicon-figma-plain colored"></i>Figma</li>
+                        <li style="--c:#555">Microsoft Office</li>
+                        <li style="--c:#1e7145">Tableau</li>
+                    </ul>
+                </div>
+                <div class="srow rv is-open">
+                    <h3 tabindex="0" role="button" aria-expanded="true">
+                        <span class="srow-title">Consultor&iacute;a</span>
+                        <span class="srow-meta"><span class="srow-badge">14</span><svg class="srow-arr"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></span>
+                    </h3>
+                    <ul>
+                        <li style="--c:#555">Levantamiento de requerimientos</li>
+                        <li style="--c:#555">An&aacute;lisis de requerimientos funcionales</li>
+                        <li style="--c:#555">Dise&ntilde;o de soluciones de software</li>
+                        <li style="--c:#555">An&aacute;lisis de procesos de negocio</li>
+                        <li style="--c:#555">Documentaci&oacute;n t&eacute;cnica y funcional</li>
+                        <li style="--c:#555">Estimaci&oacute;n de tareas</li>
+                        <li style="--c:#555">Resoluci&oacute;n de problemas t&eacute;cnicos</li>
+                        <li style="--c:#555">Mantenimiento evolutivo y correctivo</li>
+                        <li style="--c:#555">Metodolog&iacute;as &aacute;giles</li>
+                        <li style="--c:#555">Scrum</li>
+                        <li style="--c:#555">Trabajo colaborativo</li>
+                        <li style="--c:#555">Integraci&oacute;n de sistemas</li>
+                        <li style="--c:#555">An&aacute;lisis y mejora de rendimiento</li>
+                        <li style="--c:#555">Buenas pr&aacute;cticas de desarrollo de software</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- EDUCACIÓN -->
+            <section class="edu" id="educacion" aria-labelledby="ed-t">
+                <div class="sec-h rv">
+                    <h2 id="ed-t">Educación</h2><span class="mono">02 títulos</span>
+                </div>
+                <ol class="list rv">
+                    <li><svg class="hi">
+                            <use href="#i-cap" />
+                        </svg>
+                        <div>
+                            <h3>Ingeniería de Sistemas</h3><time>Universidad Tecnológica de Comfenalco</time>
+                            <p>Ingeniero de Sistemas titulado.</p>
+                        </div>
+                    </li>
+                    <li><svg>
+                            <use href="#i-cap" />
+                        </svg>
+                        <div>
+                            <h3>Tecnología en Desarrollo de Software</h3><time>Comfenalco, 2023</time>
+                            <p>Formación técnica que me permitió empezar a trabajar en proyectos reales.</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- CONTACTO -->
+            <section class="contact" id="contacto" aria-labelledby="ct-t">
+                <h2 id="ct-t" class="rv">Contacto</h2>
+                <a class="crow rv" href="mailto:josemendozak3@gmail.com"><span><svg>
+                            <use href="#i-mail" />
+                        </svg>Correo electrónico</span><b>josemendozak3@gmail.com</b></a>
+                <a class="crow rv" href="https://www.linkedin.com/in/haid-mendoza-de-avila-80410830a"
+                    rel="noopener"><span><svg>
+                            <use href="#i-list" />
+                        </svg>LinkedIn</span><b>in/haid-mendoza-de-avila</b></a>
+                <a class="crow rv" href="https://github.com/haidmendoza" rel="noopener"><span><svg>
+                            <use href="#i-code" />
+                        </svg>GitHub</span><b>@haidmendoza</b></a>
+            </section>
+
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="foot-card">
+            <div class="foot-cta">
+                <h2>¿Construimos algo juntos?</h2>
+                <a class="btn red" href="mailto:josemendozak3@gmail.com">Escríbeme</a>
+            </div>
+
+            <div class="foot-top">
+                <div class="foot-brand">
+                    <a class="logo" href="#inicio"><i aria-hidden="true"></i>Haid Mendoza</a>
+                    <p>Desarrollador frontend e Ingeniero de Sistemas en Cartagena, Colombia. Angular, microfrontends y
+                        Spring Boot.</p>
+                    <!-- CONFIG: ajusta el estado cuando cambie tu situación -->
+                    <span class="ok"><i></i>Abierto a ofertas</span>
+                </div>
+                <nav class="foot-col" aria-label="Secciones">
+                    <h3>Secciones</h3>
+                    <a href="#experiencia">Experiencia</a><a href="#arquitectura">Arquitectura</a><a
+                        href="#proyectos">Proyectos</a><a href="#habilidades">Habilidades</a><a
+                        href="#educacion">Educación</a>
+                </nav>
+                <div class="foot-col">
+                    <h3>Contacto</h3>
+                    <a href="mailto:josemendozak3@gmail.com">Correo electrónico</a>
+                    <a href="https://www.linkedin.com/in/haid-mendoza-de-avila-80410830a" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/haidmendoza" rel="noopener">GitHub</a>
+                    <a href="REEMPLAZAR_HOJA_DE_VIDA.pdf" download>Hoja de vida</a>
+                </div>
+                <div class="foot-col">
+                    <h3>Stack principal</h3>
+                    <span>Angular y TypeScript</span><span>Spring Boot</span><span>PostgreSQL</span><span>Module
+                        Federation</span>
+                </div>
+            </div>
+
+            <div class="foot-bottom">
+                <p>© 2026 Haid José Mendoza de Ávila</p>
+                <p class="mono">Hecho a mano con HTML, CSS y SVG</p>
+                <a class="up" href="#inicio" aria-label="Volver arriba"><svg>
+                        <use href="#i-down" />
+                    </svg></a>
+            </div>
+            <div class="wm" aria-hidden="true">HAID</div>
+        </div>
+    </footer>
+
+    <script>
+        const $ = (s, r = document) => [...r.querySelectorAll(s)];
+        /* Revelado escalonado al hacer scroll */
+        const io = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        }), { threshold: .12 });
+        $('.rv').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
+        /* Enlace activo en la navbar según la sección visible */
+        const links = $('.links a[data-s]');
+        const spy = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) links.forEach(l => l.classList.toggle('on', l.dataset.s === e.target.id));
+        }), { rootMargin: '-40% 0px -55% 0px' });
+        links.forEach(l => spy.observe(document.getElementById(l.dataset.s)));
+        /* Movimiento reducido: detiene los paquetes del diagrama */
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) { const d = document.querySelector('.arch-svg'); if (d && d.pauseAnimations) d.pauseAnimations(); }
+        /* Cierra el menú móvil al elegir una sección */
+        $('.links a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').checked = false));
+
+        /* ---- Carrusel de proyectos ---- */
+        (function () {
+            const track = document.getElementById('carousel-track');
+            const slides = Array.from(track ? track.children : []);
+            const dotsContainer = document.getElementById('car-dots');
+            const btnPrev = document.getElementById('car-prev');
+            const btnNext = document.getElementById('car-next');
+            if (!track || slides.length === 0) return;
+
+            const perView = () => window.innerWidth >= 900 ? 3 : window.innerWidth >= 600 ? 2 : 1;
+            let current = 0;
+            let dots = [];
+
+            function buildDots() {
+                dotsContainer.innerHTML = '';
+                dots = [];
+                const total = slides.length - perView() + 1;
+                for (let i = 0; i < total; i++) {
+                    const b = document.createElement('button');
+                    b.className = 'car-dot' + (i === current ? ' active' : '');
+                    b.setAttribute('role', 'tab');
+                    b.setAttribute('aria-label', 'Proyecto ' + (i + 1));
+                    b.setAttribute('aria-selected', i === current ? 'true' : 'false');
+                    b.addEventListener('click', () => goTo(i));
+                    dotsContainer.appendChild(b);
+                    dots.push(b);
+                }
+            }
+
+            function maxIndex() { return Math.max(0, slides.length - perView()); }
+
+            function updateTrack() {
+                const pv = perView();
+                const gap = 20;
+                const w = track.parentElement.offsetWidth;
+                const slideW = (w - gap * (pv - 1)) / pv;
+                track.style.transform = 'translateX(' + (-(current * (slideW + gap))) + 'px)';
+                slides.forEach((s, i) => {
+                    s.style.minWidth = slideW + 'px';
+                    s.style.maxWidth = slideW + 'px';
+                    s.setAttribute('aria-hidden', (i < current || i >= current + pv) ? 'true' : 'false');
+                });
+                dots.forEach((d, i) => {
+                    d.classList.toggle('active', i === current);
+                    d.setAttribute('aria-selected', i === current ? 'true' : 'false');
+                });
+                btnPrev.disabled = current === 0;
+                btnNext.disabled = current >= maxIndex();
+            }
+
+            function goTo(idx) {
+                current = Math.min(Math.max(idx, 0), maxIndex());
+                updateTrack();
+            }
+
+            btnPrev.addEventListener('click', () => goTo(current - 1));
+            btnNext.addEventListener('click', () => goTo(current + 1));
+
+            /* Gestos táctiles (swipe) para móvil y tablet */
+            let startX = 0;
+            let startY = 0;
+            track.addEventListener('touchstart', e => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+            }, { passive: true });
+
+            track.addEventListener('touchend', e => {
+                const diffX = startX - e.changedTouches[0].clientX;
+                const diffY = startY - e.changedTouches[0].clientY;
+                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+                    if (diffX > 0) goTo(current + 1);
+                    else goTo(current - 1);
+                }
+            }, { passive: true });
+
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    current = Math.min(current, maxIndex());
+                    buildDots();
+                    updateTrack();
+                }, 120);
+            });
+
+            buildDots();
+            updateTrack();
+        })();
+
+        /* ---- Toggle interactivo de habilidades al toque ---- */
+        (function () {
+            const srows = $('.skills .srow');
+            const toggleAllBtn = document.getElementById('skills-toggle-all');
+            if (!srows.length) return;
+
+            function toggleRow(row, force) {
+                const isOpen = row.classList.contains('is-open');
+                const nextState = force !== undefined ? force : !isOpen;
+                row.classList.toggle('is-open', nextState);
+                row.classList.toggle('is-closed', !nextState);
+                const h3 = row.querySelector('h3');
+                if (h3) h3.setAttribute('aria-expanded', nextState ? 'true' : 'false');
+                updateToggleAllBtn();
+            }
+
+            function updateToggleAllBtn() {
+                if (!toggleAllBtn) return;
+                const anyOpen = srows.some(r => r.classList.contains('is-open'));
+                toggleAllBtn.textContent = anyOpen ? 'Colapsar todas' : 'Expandir todas';
+                toggleAllBtn.setAttribute('aria-label', anyOpen ? 'Colapsar todas las categorías' : 'Expandir todas las categorías');
+            }
+
+            srows.forEach(row => {
+                const h3 = row.querySelector('h3');
+                if (!h3) return;
+                h3.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    toggleRow(row);
+                });
+                h3.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleRow(row);
+                    }
+                });
+            });
+
+            if (toggleAllBtn) {
+                toggleAllBtn.addEventListener('click', () => {
+                    const anyOpen = srows.some(r => r.classList.contains('is-open'));
+                    srows.forEach(r => toggleRow(r, !anyOpen));
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>
